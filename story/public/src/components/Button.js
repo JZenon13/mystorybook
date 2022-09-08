@@ -1,11 +1,9 @@
-import React from "react";
-
-function Button() {
+const Button = ({ children, ...rest }) => {
   return (
-    <div>
-      <button>Button</button>
-    </div>
+    <button className="button" {...rest}>
+      {children}
+    </button>
   );
-}
+};
 
 export default Button;

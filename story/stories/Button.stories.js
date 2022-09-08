@@ -1,15 +1,9 @@
 import Button from "../public/src/components/Button";
+import { action } from "@storybook/addon-actions";
 
 export default {
   title: "Button",
   component: Button,
 };
 
-const Template = (args) => <Button {...args} />;
-
-export const Red = Template.bind({});
-Red.args = {
-  backgroundColor: "red",
-  label: "Button",
-  size: "md",
-};
+const Text = () => <Button onClick={action("clicked")}></Button>;
